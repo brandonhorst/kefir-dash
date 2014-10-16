@@ -1,0 +1,32 @@
+{
+  "name": "kefir-dash",
+  "version": "1.0.0",
+  "description": "Dash documentation generator for Kefir FRP Library",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonhorst/kefir-dash.git"
+  },
+  "keywords": [
+    "kefir",
+    "dash",
+    "documentation",
+    "frp"
+  ],
+  "author": "Brandon Horst <brandonhorst@gmail.com> (http://github.com/brandonhorst)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonhorst/kefir-dash/issues"
+  },
+  "homepage": "https://github.com/brandonhorst/kefir-dash",
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "concat-stream": "^1.4.6",
+    "grab-string": "^1.0.0",
+    "replacestream": "^0.2.0",
+    "sqlite3": "^3.0.2"
+  }
+}
