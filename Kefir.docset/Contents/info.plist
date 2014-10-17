@@ -10,5 +10,7 @@
   <string>kefir</string>
   <key>isDashDocset</key>
   <true/>
+  <key>dashIndexFilePath</key>
+  <string>kefir.html</string>
 </dict>
 </plist>
