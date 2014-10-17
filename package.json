@@ -26,7 +26,6 @@
     "cheerio": "^0.17.0",
     "concat-stream": "^1.4.6",
     "grab-string": "^1.0.0",
-    "replacestream": "^0.2.0",
     "sqlite3": "^3.0.2"
   }
 }

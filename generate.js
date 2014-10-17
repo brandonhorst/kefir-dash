@@ -2,7 +2,6 @@ var grabString = require('grab-string');
 var cheerio = require('cheerio');
 var http = require('http');
 var fs = require('fs');
-var replacestream = require('replacestream');
 var sqlite3 = require('sqlite3').verbose();
 // var $ = cheerio.load('<h2 class="title">Hello world</h2>');
 
@@ -12,10 +11,14 @@ var sqlite3 = require('sqlite3').verbose();
 var htmlFileStream = fs.createWriteStream('Kefir.docset/Contents/Resources/Documents/kefir.html')
 http.get('http://pozadi.github.io/kefir/', function (response) {
   response
-  .pipe(replacestream('Kefir.svg', 'http://pozadi.github.io/kefir/Kefir.svg'))
-  .pipe(grabString(parse))
-  .pipe(htmlFileStream);
-})
+    .pipe(grabString(parse))
+    .pipe(htmlFileStream);
+});
+
+var svgFileStream = fs.createWriteStream('Kefir.docset/Contents/Resources/Documents/Kefir.svg')
+http.get('http://pozadi.github.io/kefir/Kefir.svg', function (response) {
+  response.pipe(svgFileStream);
+});
 
 //Step 4 - create the SQLite Index
 
